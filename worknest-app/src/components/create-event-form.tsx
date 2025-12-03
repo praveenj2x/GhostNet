@@ -92,13 +92,16 @@ export function CreateEventForm({
     if (result.error) {
       setError(result.error);
       setLoading(false);
-    } else {
+    } else if (result.success) {
       // Event created successfully, redirect
       startTransition(() => {
         router.push("/dashboard/calendar");
         router.refresh();
       });
-      // Don't set loading to false here - let the transition handle it
+    } else {
+      // Unexpected response
+      setError("An unexpected error occurred");
+      setLoading(false);
     }
   };
 
