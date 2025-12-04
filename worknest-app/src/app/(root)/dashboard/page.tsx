@@ -48,49 +48,49 @@ export default async function DashboardPage() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          <Card>
+          <Card className="border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:shadow-lg hover:shadow-primary/20 transition-all">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Teams</CardTitle>
               <div className="flex items-center gap-2">
-                <span className="text-xl">🎃</span>
+                <span className="text-3xl animate-glow">🎃</span>
                 <Briefcase className="h-4 w-4 text-muted-foreground" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{teams?.length || 0}</div>
-              <p className="text-xs text-muted-foreground">
+              <div className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{teams?.length || 0}</div>
+              <p className="text-xs text-muted-foreground mt-1">
                 Active teams in your organization
               </p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-secondary/30 bg-gradient-to-br from-card to-secondary/5 hover:shadow-lg hover:shadow-secondary/20 transition-all">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Team Members</CardTitle>
               <div className="flex items-center gap-2">
-                <span className="text-xl">👻</span>
+                <span className="text-3xl animate-pulse-glow">👻</span>
                 <Users className="h-4 w-4 text-muted-foreground" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{members?.length || 0}</div>
-              <p className="text-xs text-muted-foreground">
+              <div className="text-3xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">{members?.length || 0}</div>
+              <p className="text-xs text-muted-foreground mt-1">
                 People in your organization
               </p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-primary/30 bg-gradient-to-br from-card to-primary/5 hover:shadow-lg hover:shadow-primary/20 transition-all">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Pending Invites</CardTitle>
               <div className="flex items-center gap-2">
-                <span className="text-xl">🦇</span>
+                <span className="text-3xl animate-float">🦇</span>
                 <UserPlus className="h-4 w-4 text-muted-foreground" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{pendingInvitations.length}</div>
-              <p className="text-xs text-muted-foreground">
+              <div className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{pendingInvitations.length}</div>
+              <p className="text-xs text-muted-foreground mt-1">
                 Awaiting acceptance
               </p>
             </CardContent>

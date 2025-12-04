@@ -7,7 +7,7 @@ import { signIn } from "@/lib/auth-client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useSearchParams } from "next/navigation";
-import { Loader2, Briefcase, Users, CheckCircle2, Sparkles } from "lucide-react";
+import { Loader2, Users, CheckCircle2, Sparkles } from "lucide-react";
 
 function SignInContent() {
   const searchParams = useSearchParams();
@@ -19,41 +19,41 @@ function SignInContent() {
   return (
     <div className="min-h-screen w-full flex">
       {/* Left Side - Branding & Features */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
-          <div className="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-40 w-72 h-72 bg-indigo-300 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-4000"></div>
+          <div className="absolute top-40 right-20 w-72 h-72 bg-orange-300 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-20 left-40 w-72 h-72 bg-purple-300 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-between p-12 text-white w-full">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Briefcase className="h-8 w-8" />
-              <h1 className="text-3xl font-bold">WorkNest</h1>
+              <span className="text-5xl animate-glow">👻</span>
+              <h1 className="text-3xl font-bold">GhostNet</h1>
             </div>
-            <p className="text-purple-100 text-lg">Your workspace, simplified.</p>
+            <p className="text-orange-100 text-lg">Your spooky workspace, haunted with productivity. 🎃</p>
           </div>
 
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold mb-6 leading-tight">
-                Collaborate seamlessly<br />with your team
+                Haunt your tasks,<br />bewitch your team
               </h2>
-              <p className="text-purple-100 text-lg max-w-md">
-                Manage tasks, track progress, and build amazing things together in one unified workspace.
+              <p className="text-orange-100 text-lg max-w-md">
+                Summon productivity from the shadows. Manage tasks, track progress, and conjure amazing results together.
               </p>
             </div>
 
             <div className="space-y-4">
               {[
-                { icon: Users, text: "Team collaboration made easy" },
-                { icon: CheckCircle2, text: "Task management & tracking" },
-                { icon: Sparkles, text: "Beautiful, intuitive interface" }
+                { icon: Users, text: "Spectral team collaboration" },
+                { icon: CheckCircle2, text: "Bewitching task management" },
+                { icon: Sparkles, text: "Hauntingly beautiful interface" }
               ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 text-purple-50">
+                <div key={index} className="flex items-center gap-3 text-orange-50">
                   <div className="h-10 w-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
                     <feature.icon className="h-5 w-5" />
                   </div>
@@ -63,8 +63,8 @@ function SignInContent() {
             </div>
           </div>
 
-          <div className="text-purple-200 text-sm">
-            © 2024 WorkNest. All rights reserved.
+          <div className="text-orange-200 text-sm">
+            © 2024 GhostNet. All rights reserved. 👻
           </div>
         </div>
       </div>
@@ -75,10 +75,10 @@ function SignInContent() {
           {/* Mobile Logo */}
           <div className="lg:hidden mb-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Briefcase className="h-8 w-8" />
-              <h1 className="text-3xl font-bold">WorkNest</h1>
+              <span className="text-5xl animate-pulse-glow">👻</span>
+              <h1 className="text-3xl font-bold">GhostNet</h1>
             </div>
-            <p className="text-muted-foreground">Your workspace, simplified.</p>
+            <p className="text-muted-foreground">Your spooky workspace 🎃</p>
           </div>
 
           <Card className="border-2 shadow-xl">

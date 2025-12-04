@@ -55,11 +55,13 @@ export function PendingInvitationsCard({ invitations }: PendingInvitationsProps)
     }
 
     return (
-        <Card className="border-blue-200 bg-blue-50/50">
+        <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-card to-secondary/10 shadow-lg shadow-primary/20">
             <CardHeader>
                 <div className="flex items-center gap-2">
-                    <Mail className="h-5 w-5 text-blue-600" />
-                    <CardTitle className="text-lg">Pending Invitations</CardTitle>
+                    <span className="text-2xl animate-pulse-glow">👻</span>
+                    <CardTitle className="text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Pending Invitations
+                    </CardTitle>
                 </div>
                 <CardDescription>
                     You have {visibleInvitations.length} pending invitation{visibleInvitations.length !== 1 ? 's' : ''}
@@ -69,7 +71,7 @@ export function PendingInvitationsCard({ invitations }: PendingInvitationsProps)
                 {visibleInvitations.map((invitation) => (
                     <div
                         key={invitation.id}
-                        className="flex items-center justify-between p-4 bg-white rounded-lg border"
+                        className="flex items-center justify-between p-4 bg-card/50 rounded-lg border border-primary/20 hover:border-primary/40 transition-all hover:shadow-md hover:shadow-primary/10"
                     >
                         <div className="flex-1">
                             <p className="font-medium">{invitation.organization.name}</p>
@@ -84,6 +86,7 @@ export function PendingInvitationsCard({ invitations }: PendingInvitationsProps)
                             <Button
                                 size="sm"
                                 onClick={() => handleAccept(invitation.email, invitation.organizationId)}
+                                className="bg-primary hover:bg-primary/90"
                             >
                                 <ExternalLink className="h-4 w-4 mr-1" />
                                 Accept
@@ -92,6 +95,7 @@ export function PendingInvitationsCard({ invitations }: PendingInvitationsProps)
                                 size="sm"
                                 variant="ghost"
                                 onClick={() => handleDismiss(invitation.id)}
+                                className="hover:bg-secondary/20"
                             >
                                 Dismiss
                             </Button>
