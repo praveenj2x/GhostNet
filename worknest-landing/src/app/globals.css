@@ -3,10 +3,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F1DC;
-  --foreground: #001BB7;
-  --primary: #0046FF;
-  --accent: #FF8040;
+  --background: #0a0a0a;
+  --foreground: #ff6b35;
+  --primary: #6a0dad;
+  --accent: #ff8c00;
+  --ghost: #e8e8e8;
+  --spooky-green: #39ff14;
 }
 
 @theme inline {
@@ -20,10 +22,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #001BB7;
-    --foreground: #F5F1DC;
-    --primary: #0046FF;
-    --accent: #FF8040;
+    --background: #0a0a0a;
+    --foreground: #ff6b35;
+    --primary: #6a0dad;
+    --accent: #ff8c00;
   }
 }
 
@@ -182,6 +184,6 @@ div[style*="position: fixed"][style*="z-index"] {
 }
 
 ::selection {
-  background: #ff8040; 
-  color: #fff; 
+  background: #ff8c00; 
+  color: #0a0a0a; 
 }
