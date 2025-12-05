@@ -63,7 +63,7 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <motion.a
-              href="https://app.worknest.kushinpi.me/"
+              href="https://app.ghostnet.kushinpi.me/"
               className="px-6 py-2.5 bg-[#6a0dad] text-white funnel-sans-semibold rounded-full hover:bg-[#8b2dd9] transition-all duration-300 hover:shadow-lg hover:shadow-[#6a0dad]/50"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
